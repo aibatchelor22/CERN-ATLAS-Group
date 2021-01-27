@@ -24,13 +24,13 @@ TFile* outputFile = TFile::Open( "TMVAVarGridDistBarrel_mS55.root", "RECREATE" )
 
 TMVA::Factory* factory = new TMVA::Factory( "TMVA Analysis", outputFile);
 
-TFile *input1 = TFile::Open( "/afs/cern.ch/user/c/calpigia/eos/public/forAshley/mc16ade_13TeV.311315.MadGraphPythia8EvtGen_A14NNPDF31LO_HSS_LLP_mH125_mS55_lthigh_DIST_NEW.root"  );
+TFile *input1 = TFile::Open( "mc16ade_13TeV.311315.MadGraphPythia8EvtGen_A14NNPDF31LO_HSS_LLP_mH125_mS55_lthigh_DIST_NEW.root"  );
 TTree* sigTree = (TTree*)input1->Get( "BDTFVariables" );
     //Filter for barrel or endcap
     TTree* originalSigTree = sigTree;
     TCut sigCut = "((nHits !=0) && (DetectorRegion==1) && (!std::isnan(Tracklet_avg_dR)) && (!std::isnan(Segment_avg_dR)) && (!std::isinf(Tracklet_avg_dR)) && (!std::isinf(Segment_avg_dR)))";
     
-TFile *input2 = TFile::Open("/afs/cern.ch/user/c/calpigia/eos/public/forAshley/data15_13TeV.physics_Main_DIST_NEW.root" );
+TFile *input2 = TFile::Open("data15_13TeV.physics_Main_DIST_NEW.root" );
 TTree* backTree = (TTree*)input2->Get( "BDTFVariables" );
     //Filter for barrel or endcap, and set validation region
     TCut backCut = "(nHits !=0) && (DetectorRegion==1)  && (!std::isnan(Segment_avg_dR)) && (!std::isnan(Tracklet_avg_dR)) && (!std::isinf(Tracklet_avg_dR)) && (!std::isinf(Segment_avg_dR))";
