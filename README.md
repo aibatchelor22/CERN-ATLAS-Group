@@ -1,4 +1,4 @@
-# Boosted Decision Trees for Separating Signal from Background Measurements in Search for Long Lived, Weakly Interacting Particles in pp Collisions at ?s = 13 TeV 
+# Boosted Decision Trees for Separating Signal from Background Measurements in Search for Long Lived, Weakly Interacting Particles in pp Collisions at sqrt(s) = 13 TeV 
 ## Ashley Batchelor, University of Washington Department of Physics 
 ## Final Project for M.S. Physics
 
