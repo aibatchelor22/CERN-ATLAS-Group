@@ -45,15 +45,15 @@ Int_t isVtxRoIMatched(double vtx_eta, double vtx_phi, vector<float> *roi_eta, ve
 
 void AddBDTFVariables(){
 
-// const int cp_err = gSystem->Exec("cp /afs/cern.ch/user/c/calpigia/eos/ExoticsData/LLPMain/data15_13TeV.physics_Main.root /afs/cern.ch/user/c/calpigia/eos/public/forAshley/data15_13TeV.physics_Main_DIST_BAR_NEW.root");
+// const int cp_err = gSystem->Exec("cp data15_13TeV.physics_Main.root data15_13TeV.physics_Main_DIST_BAR_NEW.root");
 //   if (-1 == cp_err){ printf("Error copying input file!n"); exit(1); }
 
-//   TFile *input1 = TFile::Open( "/afs/cern.ch/user/c/calpigia/eos/public/forAshley/data15_13TeV.physics_Main_DIST_BAR_NEW.root", "UPDATE" );
+//   TFile *input1 = TFile::Open( "data15_13TeV.physics_Main_DIST_BAR_NEW.root", "UPDATE" );
 
-const int cp_err = gSystem->Exec("cp /afs/cern.ch/user/c/calpigia/eos/ExoticsData/LLPSignals/mc16ade_13TeV.311310.MadGraphPythia8EvtGen_A14NNPDF31LO_HSS_LLP_mH125_mS5_lthigh.root /afs/cern.ch/user/c/calpigia/eos/public/forAshley/mc16ade_13TeV.311310.MadGraphPythia8EvtGen_A14NNPDF31LO_HSS_LLP_mH125_mS5_lthigh_DIST_EC_NEW.root");
+const int cp_err = gSystem->Exec("cp mc16ade_13TeV.311310.MadGraphPythia8EvtGen_A14NNPDF31LO_HSS_LLP_mH125_mS5_lthigh.root mc16ade_13TeV.311310.MadGraphPythia8EvtGen_A14NNPDF31LO_HSS_LLP_mH125_mS5_lthigh_DIST_EC_NEW.root");
   if (-1 == cp_err){ printf("Error copying input file!n"); exit(1); }
 
-     TFile *input1 = TFile::Open( "/afs/cern.ch/user/c/calpigia/eos/public/forAshley/mc16ade_13TeV.311310.MadGraphPythia8EvtGen_A14NNPDF31LO_HSS_LLP_mH125_mS5_lthigh_DIST_EC_NEW.root", "UPDATE" );
+     TFile *input1 = TFile::Open( "mc16ade_13TeV.311310.MadGraphPythia8EvtGen_A14NNPDF31LO_HSS_LLP_mH125_mS5_lthigh_DIST_EC_NEW.root", "UPDATE" );
      TTree* inputTree = (TTree*)input1->Get( "trees_MS_" );
      TTree* outputTree = new TTree("BDTFVariables","BDTFVariables");
 
