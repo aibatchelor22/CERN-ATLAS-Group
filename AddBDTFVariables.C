@@ -43,7 +43,7 @@ Int_t isVtxRoIMatched(double vtx_eta, double vtx_phi, vector<float> *roi_eta, ve
 
 
 
-void AddBDTFVariablesRevD(){
+void AddBDTFVariables(){
 
 // const int cp_err = gSystem->Exec("cp /afs/cern.ch/user/c/calpigia/eos/ExoticsData/LLPMain/data15_13TeV.physics_Main.root /afs/cern.ch/user/c/calpigia/eos/public/forAshley/data15_13TeV.physics_Main_DIST_BAR_NEW.root");
 //   if (-1 == cp_err){ printf("Error copying input file!n"); exit(1); }
