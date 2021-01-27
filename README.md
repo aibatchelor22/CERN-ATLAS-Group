@@ -19,10 +19,15 @@ https://root.cern/manual/tmva/
 ## Files
 
 AddBDTFVariables.C
+
 	Feature engineering from raw data output by Monte Carlo simulations
+
 Ashley Batchelor Final Paper.pdf 
-	Capstone project paper submitted toM.S. Physics advisory committee.
+
+	Capstone project paper submitted to advisory committee for M.S. Physics.
+
 TMVAAshleyGrid.C
+
 	Boosted Decision Tree models with hyperparameter tuning by grid search.
 
 
